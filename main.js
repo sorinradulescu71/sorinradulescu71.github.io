@@ -28,7 +28,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://platform.openai.com/";
+const url = "https://api.openai.com/v1/engines/davinci-codex/completions";
 
 (function () {
   const template = document.createElement("template");
