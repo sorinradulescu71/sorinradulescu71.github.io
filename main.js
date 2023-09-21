@@ -5,7 +5,7 @@ var ajaxCall = (key, url, prompt) => {
       type: "POST",
       dataType: "json",
       data: JSON.stringify({
-        model: "text-davinci-003",
+        model: "text-davinci-002",
         prompt: prompt,
         max_tokens: 1024,
         n: 1,
@@ -45,7 +45,7 @@ const url = "https://api.openai.com/v1";
         `${url}/${endpoint}`,
         prompt
       );
-      console.log(response.choices[0].text);
+      //console.log(response.choices[0].text);
       return response.choices[0].text;
     }
   }
