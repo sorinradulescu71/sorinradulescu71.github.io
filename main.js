@@ -28,7 +28,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://chat.openai.com/";
+const url = "https://platform.openai.com/";
 
 (function () {
   const template = document.createElement("template");
