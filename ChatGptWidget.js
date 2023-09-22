@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || "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";
       const {
         max_tokens
       } = this._props || 1024;
@@ -100,12 +100,12 @@
             "temperature": 0.5
           })
         });
-
+		if (!response.ok) {
+			throw new Error(`API request failed with status ${response.status}`);
+		}
         if (response.status === 200) {
-          const {
-            choices
-          } = await response.json();
-          const generatedTextValue = choices[0].text;
+          const data = await response.json();
+          const generatedTextValue = data.choices[0].message.content;
           generatedText.value = generatedTextValue.replace(/^\n+/, '');
         } else {
           const error = await response.json();
