@@ -86,13 +86,11 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://sce-pal-genai-test.openai.azure.com/v1/engines/davinci-codex/completions", {
+        const response = await fetch("https://sce-pal-genai-test.openai.azure.com/v1/engines/davinci-codex/completion", {
           method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-			'Authorization': `Bearer ${apiKey}`,
-			'OpenAI-Organization': 'sce-pal-genai-test',
-			'OpenAI-API-Version': apiVersion
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + apiKey
           },
           body: JSON.stringify({
             "model": "text-davinci-002",

@@ -135,7 +135,7 @@ input[type="color"]::-webkit-color-swatch {
       }
 
    }
-   customElements.define("sorin-builder",
+   customElements.define("sorin-chatgptwidget-builder",
       ChatGptWidgetBuilderPanel
    );
 })();
