@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "sk-503c00daa7e34897b88d64ef7e9b015a";
+      } = this._props || "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";
       const {
         max_tokens
       } = this._props || 1024;
@@ -86,7 +86,7 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://sce-pal-genai-test.openai.azure.com/v1/engines/davinci-codex/completions", {
+        const response = await fetch("https://api.openai.com/v1/completions", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -100,18 +100,11 @@
             "temperature": 0.5
           })
         });
-		if (!response.ok) {
-			throw new Error(`API request failed with status ${response.status}`);
-		}
-        if (response.status === 200) {
-          const data = await response.json();
-          const generatedTextValue = data.choices[0].message.content;
-          generatedText.value = generatedTextValue.replace(/^\n+/, '');
-        } else {
-          const error = await response.json();
-          alert("OpenAI Response: " + error.error.message);
-          generatedText.value = "";
-        }
+        const {
+          choices
+        } = await response.json();
+        const generatedTextValue = choices[0].text;
+        generatedText.value = generatedTextValue.replace(/^\n+/, '');
       });
     }
     onCustomWidgetBeforeUpdate(changedProperties) {
@@ -124,5 +117,5 @@
       this.initMain();
     }
   }
-  customElements.define("chatgptwidget", Widget);
+  customElements.define("com-rohitchouhan-sap-chatgptwidget", Widget);
 })();

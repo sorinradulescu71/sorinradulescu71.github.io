@@ -1,25 +1,25 @@
 {
     "id": "chatgptwidget",
-    "version": "1.0.3",
+    "version": "1.0.1",
     "name": "ChatGPT Widget",
-    "description": "ChatGPT Custom Widget for SAP Analytics Cloud, To make your application more useful and effective.",
+    "description": "ChatGPT Custom Widget for SAP Analytics Cloud",
     "newInstancePrefix": "ChatGptWidget",
-    "vendor": "sap sorin",
+    "vendor": "sorin",
     "eula": "",
     "license": "MIT",
-    "icon": "https://sorinradulescu71.github.io/icon.png",
+    "icon": "https://github.com/sorinradulescu71/sorinradulescu71.github.io/blob/main/icon.png",
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "chatgbtwidget",
-            "url": "https://sorinradulescu71.github.io/ChatGptWidget.js",
+            "tag": "com-rohitchouhan-sap-chatgptwidget",
+            "url": "https://github.com/sorinradulescu71/sorinradulescu71.github.io/blob/main/ChatGptWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
-            "tag": "chatgbt-builder",
-            "url": "https://sorinradulescu71.github.io/ChatGptWidget_Builder.js",
+            "tag": "sorin-chatgptwidget-builder",
+            "url": "https://github.com/sorinradulescu71/sorinradulescu71.github.io/blob/main/ChatGptWidget_Builder.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
