@@ -117,5 +117,5 @@
       this.initMain();
     }
   }
-  customElements.define("sorin-chatgptwidget-builder", Widget);
+  customElements.define("sorin-chatgptwidget", Widget);
 })();
