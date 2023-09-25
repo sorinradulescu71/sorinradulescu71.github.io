@@ -92,6 +92,7 @@ input[type="color"]::-webkit-color-swatch {
     
     </table>
     <input value="Update Settings" type="submit">
+    <br>
 </form>
 `;
    class ChatGptWidgetBuilderPanel extends HTMLElement {
@@ -134,7 +135,7 @@ input[type="color"]::-webkit-color-swatch {
       }
 
    }
-   customElements.define("chatgptwidget-builder",
+   customElements.define("com-rohitchouhan-sap-chatgptwidget-builder",
       ChatGptWidgetBuilderPanel
    );
 })();
