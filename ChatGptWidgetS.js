@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || "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";
       const {
         max_tokens
       } = this._props || 1024;
