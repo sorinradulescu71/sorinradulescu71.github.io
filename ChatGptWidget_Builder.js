@@ -135,7 +135,7 @@ input[type="color"]::-webkit-color-swatch {
       }
 
    }
-   customElements.define("com-rohitchouhan-sap-chatgptwidget-builder",
+   customElements.define("s-builder",
       ChatGptWidgetBuilderPanel
    );
 })();
