@@ -90,9 +90,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": Bearer ${apiKey},
-			"OpenAI-Organization": 'sce-pal-genai-test',
-			"OpenAI-API-Version": '2023-06-01-preview'
+            "Authorization": "Bearer " + apiKey
           },
           body: JSON.stringify({
             "model": "text-davinci-002",
