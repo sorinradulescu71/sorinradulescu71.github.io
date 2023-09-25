@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || "503c00daa7e34897b88d64ef7e9b015a";
       const {
         max_tokens
       } = this._props || 1024;
@@ -86,11 +86,13 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://api.openai.com/v1/completions", {
+        const response = await fetch("https://sce-pal-genai-test.openai.azure.com/v1/engines/davinci-codex/completions", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + apiKey
+            'Content-Type': 'application/json',
+			'Authorization': `Bearer ${apiKey}`,
+			'OpenAI-Organization': 'sce-pal-genai-test',
+			'OpenAI-API-Version': apiVersion
           },
           body: JSON.stringify({
             "model": "text-davinci-002",
@@ -117,5 +119,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-rohitchouhan-sap-chatgptwidget", Widget);
+  customElements.define("sorin-chatgptwidget", Widget);
 })();
